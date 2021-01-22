@@ -1,5 +1,5 @@
 //
-//  MovieApi.swift
+//  MoviePlayerAPI.swift
 //  Movie Player
 //
 //  Created by Veverly Mae Ricaza Veverly on 1/21/21.
@@ -11,14 +11,14 @@ import Alamofire
 
 let apiKey = "02f2306c3090583214e86def5a1725b1"
 
-enum MovieApi {
+enum MoviePlayerAPI {
     case reco(id: Int)
     case topRated(page: Int)
     case newMovies(page: Int)
     case video(id: Int)
 }
 
-extension MovieApi: TargetType, AccessTokenAuthorizable {
+extension MoviePlayerAPI: TargetType, AccessTokenAuthorizable {
     var baseURL: URL {
         guard let url = URL(string: "https://api.themoviedb.org/3/") else { fatalError() }
         return url

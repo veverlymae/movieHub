@@ -1,5 +1,5 @@
 //
-//  Genres.swift
+//  Genre.swift
 //  Movie Player
 //
 //  Created by Veverly Mae Ricaza Veverly on 1/21/21.
@@ -7,3 +7,15 @@
 //
 
 import Foundation
+
+struct Genre {
+    var id: Int
+    var name: String
+}
+
+extension Genre: Codable {
+    enum CodingKeys: String, CodingKey {
+        case id,
+        name
+    }
+}

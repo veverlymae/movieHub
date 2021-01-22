@@ -7,3 +7,19 @@
 //
 
 import Foundation
+import SwiftEntryKit
+
+class ApplicationCoordinator: Coordinator {
+
+    let window: UIWindow
+    var device = UIDevice.current.screenType
+    var attributes: EKAttributes = EKAttributes()
+
+    init(window: UIWindow) {
+        self.window = window
+    }
+
+    func start() {
+        setupTopViewController()
+    }
+}

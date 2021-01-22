@@ -7,3 +7,20 @@
 //
 
 import Foundation
+
+struct ApiResults {
+    let page: Int
+    let numResults: Int
+    let numPages: Int
+    let movies: [Movie]
+}
+
+extension ApiResults: Codable {
+    enum CodingKeys: String, CodingKey {
+        case page,
+        numResults = "total_results",
+        numPages = "total_pages",
+        movies = "results"
+    }
+    
+}

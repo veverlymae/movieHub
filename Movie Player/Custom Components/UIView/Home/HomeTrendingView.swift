@@ -10,12 +10,41 @@ import UIKit
 
 class HomeTrendingView: UIView {
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    lazy var trendingLabel: UILabel = UILabel()
+    lazy var trendingCollectionView: UICollectionView = {
+         let layout = UICollectionViewFlowLayout()
+         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+         return collectionView
+    }()
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setupView()
     }
-    */
+
+    required init?(coder: NSCoder) { fatalError("init(coder:) has not been implemented") }
+    
+    private func setupView() {
+        setupTrendingLabel()
+        setupTrendingCollectionView()
+    }
+    
+    private func setupTrendingLabel() {
+        trendingLabel.text = "Trending"
+        trendingLabel.textColor = .white
+        trendingLabel.font = UIFont.systemFont(ofSize: 18, weight: .bold)
+        addSubview(trendingLabel)
+        trendingLabel.snp.makeConstraints { make in
+            make.top.left.right.equalToSuperview().inset(20)
+        }
+    }
+    
+    private func setupTrendingCollectionView() {
+        addSubview(trendingCollectionView)
+        trendingCollectionView.snp.makeConstraints { make in
+            make.top.equalTo(trendingLabel.snp.bottom).offset(10)
+            make.left.right.bottom.equalToSuperview()
+        }
+    }
 
 }
