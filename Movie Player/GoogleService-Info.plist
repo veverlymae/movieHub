@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>129709778968-0fgigv1c34tubi9s1m41urj7te2kfj1a.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.129709778968-0fgigv1c34tubi9s1m41urj7te2kfj1a</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDVOJH-zHPqYhwCCc-rkesdVNR2XgR5O1Q</string>
+	<key>GCM_SENDER_ID</key>
+	<string>129709778968</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.lig.Movie-Player</string>
+	<key>PROJECT_ID</key>
+	<string>fir-tutorial1-8e8d4</string>
+	<key>STORAGE_BUCKET</key>
+	<string>fir-tutorial1-8e8d4.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:129709778968:ios:38c71ba4cb2bcfc8a93b6d</string>
+	<key>DATABASE_URL</key>
+	<string>https://fir-tutorial1-8e8d4.firebaseio.com</string>
+</dict>
+</plist>
