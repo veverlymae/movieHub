@@ -1,5 +1,7 @@
 PODS:
   - Alamofire (5.4.1)
+  - AlamofireImage (4.1.0):
+    - Alamofire (~> 5.1)
   - CocoaLumberjack/Core (3.7.0)
   - CocoaLumberjack/Swift (3.7.0):
     - CocoaLumberjack/Core
@@ -17,6 +19,7 @@ PODS:
   - NVActivityIndicatorView (5.1.1):
     - NVActivityIndicatorView/Base (= 5.1.1)
   - NVActivityIndicatorView/Base (5.1.1)
+  - ObjectMapper (4.2.0)
   - QuickLayout (3.0.0)
   - ReactiveCocoa (10.3.0):
     - ReactiveSwift (~> 6.2)
@@ -34,6 +37,7 @@ PODS:
   - SwiftyUserDefaults (5.0.0)
 
 DEPENDENCIES:
+  - AlamofireImage
   - CocoaLumberjack/Swift
   - Fakery
   - iOSDropDown
@@ -43,6 +47,7 @@ DEPENDENCIES:
   - Mocker (~> 2.2.0)
   - Moya/ReactiveSwift (~> 14.0)
   - NVActivityIndicatorView
+  - ObjectMapper
   - ReactiveCocoa (~> 10.1)
   - ReactiveSwift (~> 6.1)
   - SDWebImage (~> 4.0)
@@ -57,6 +62,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
+    - AlamofireImage
     - CocoaLumberjack
     - Fakery
     - iOSDropDown
@@ -66,6 +72,7 @@ SPEC REPOS:
     - Mocker
     - Moya
     - NVActivityIndicatorView
+    - ObjectMapper
     - QuickLayout
     - ReactiveCocoa
     - ReactiveSwift
@@ -80,6 +87,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
+  AlamofireImage: c4a2ba349885fb3064feb74d2e547bd42ce9be10
   CocoaLumberjack: e8955b9d337ac307103b0a34fd141c32f27e53c5
   Fakery: 8146918b8dd6df98564dca10cbe8bd05354b8cc4
   iOSDropDown: c10a761f9a00c3f1cc9d3bce43ae504628e2f692
@@ -89,6 +97,7 @@ SPEC CHECKSUMS:
   Mocker: d0ceb340eddd5c28539a691ce67d068674cef9a0
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
   NVActivityIndicatorView: 1f6c5687f1171810aa27a3296814dc2d7dec3667
+  ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
   QuickLayout: 07b45a72b10083fee3f095990cfed1c1e7b27f0a
   ReactiveCocoa: 083ae559e6f588ce519cab412ea119b431c26a24
   ReactiveSwift: 8d159904084e908856cde90b2e28823f3c7e485f
@@ -101,6 +110,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
   SwiftyUserDefaults: 33fcb42bd1feb53a37d873feb62c82967db5f7f6
 
-PODFILE CHECKSUM: 3ce24a69d3d51938fa428f27f287a411e4046567
+PODFILE CHECKSUM: f2b9611ae84b514af39326c3e68669b4ad0395d4
 
 COCOAPODS: 1.8.4

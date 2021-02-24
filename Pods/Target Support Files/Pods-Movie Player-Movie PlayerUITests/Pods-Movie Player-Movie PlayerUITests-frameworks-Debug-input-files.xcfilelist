@@ -1,5 +1,6 @@
 ${PODS_ROOT}/Target Support Files/Pods-Movie Player-Movie PlayerUITests/Pods-Movie Player-Movie PlayerUITests-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
+${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework
 ${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework
 ${BUILT_PRODUCTS_DIR}/Fakery/Fakery.framework
 ${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework
@@ -8,6 +9,7 @@ ${BUILT_PRODUCTS_DIR}/Locksmith/Locksmith.framework
 ${BUILT_PRODUCTS_DIR}/Mocker/Mocker.framework
 ${BUILT_PRODUCTS_DIR}/Moya/Moya.framework
 ${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework
+${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework
 ${BUILT_PRODUCTS_DIR}/QuickLayout/QuickLayout.framework
 ${BUILT_PRODUCTS_DIR}/ReactiveCocoa/ReactiveCocoa.framework
 ${BUILT_PRODUCTS_DIR}/ReactiveSwift/ReactiveSwift.framework

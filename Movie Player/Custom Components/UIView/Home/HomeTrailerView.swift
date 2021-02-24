@@ -12,9 +12,10 @@ class HomeTrailerView: UIView {
 
     lazy var latestTrailerLabel: UILabel = UILabel()
     lazy var trailerCollectionView: UICollectionView = {
-         let layout = UICollectionViewFlowLayout()
-         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-         return collectionView
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .vertical
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        return collectionView
     }()
     
     override init(frame: CGRect) {

@@ -48,6 +48,7 @@ extension HomeViewController {
         homeTrailerView.snp.makeConstraints { make in
             make.top.equalTo(homeSubHeaderView.snp.bottom)
             make.left.right.equalTo(homeSubHeaderView)
+             make.height.equalTo(500)
         }
     }
     

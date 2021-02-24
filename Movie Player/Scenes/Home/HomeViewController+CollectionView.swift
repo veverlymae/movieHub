@@ -10,13 +10,21 @@ import Foundation
 import UIKit
 
 extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        guard let movieModels = moviesResponseModel?.result else { return 0 }
+        return movieModels.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell: UICollectionViewCell = UICollectionViewCell()
-        cell.backgroundColor = .white
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.Indentifier.movieCollectionViewCell, for: indexPath) as? MovieCollectionViewCell else {
+            return UICollectionViewCell()
+        }
+        
+        cell.movieViewModel = self.moviesResponseModel?.result?[indexPath.row]
         return cell
     }
 }

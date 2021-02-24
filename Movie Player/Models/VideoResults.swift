@@ -9,5 +9,13 @@
 import Foundation
 
 struct VideoResults {
-    
+    let details: [VideoKey]
+    private enum CodingKeys: String, CodingKey {
+        case details = "results"
+    }
 }
+
+struct VideoKey: Codable {
+    let key: String
+}
+

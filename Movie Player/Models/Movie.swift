@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import ObjectMapper
 
 struct Movie {
     let id: Int
@@ -21,7 +22,7 @@ struct Movie {
     
 }
 
-extension Movie: Codable {
+extension Movie: Decodable {
     enum CodingKeys: String, CodingKey {
         case id,
         posterPath = "poster_path",

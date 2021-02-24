@@ -26,6 +26,8 @@ target 'Movie Player' do
   pod 'Mocker', '~> 2.2.0'
   pod 'SDWebImage', '~> 4.0'
   pod 'iOSDropDown'
+  pod 'ObjectMapper'
+  pod 'AlamofireImage'
 
   target 'Movie PlayerTests' do
     inherit! :search_paths

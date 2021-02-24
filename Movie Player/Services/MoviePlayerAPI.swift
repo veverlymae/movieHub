@@ -9,38 +9,30 @@
 import Moya
 import Alamofire
 
-let apiKey = "02f2306c3090583214e86def5a1725b1"
+let apiKey = "8690372ae0e553b32046c8c9d7d83a3c"
+let language = "en-US"
 
 enum MoviePlayerAPI {
-    case reco(id: Int)
-    case topRated(page: Int)
-    case newMovies(page: Int)
-    case video(id: Int)
+    case getPopularMovieList(request: MovieLatestList.Request)
 }
 
 extension MoviePlayerAPI: TargetType, AccessTokenAuthorizable {
     var baseURL: URL {
-        guard let url = URL(string: "https://api.themoviedb.org/3/") else { fatalError() }
+        guard let url = URL(string: "https://api.themoviedb.org/3/movie/") else { fatalError() }
         return url
     }
     
     var authorizationType: AuthorizationType? {
         switch self {
-            
-        case .reco,
-             .topRated,
-             .newMovies,
-             .video:
+        case .getPopularMovieList:
             return nil
-        default:
-            return .bearer
         }
     }
     
     var path: String {
         switch self {
-        case .reco:
-            return ""
+        case .getPopularMovieList(let request):
+            return "popular"
         default:
             return ""
         }
@@ -48,8 +40,6 @@ extension MoviePlayerAPI: TargetType, AccessTokenAuthorizable {
     
     var method: Moya.Method {
         switch self {
-        case .reco:
-            return .post
         default:
             return .get
         }
@@ -61,8 +51,8 @@ extension MoviePlayerAPI: TargetType, AccessTokenAuthorizable {
     
     var parameters: [String: Any]? {
         switch self {
-        case .reco(let id):
-            return ["id": id]
+        case .getPopularMovieList(let request):
+            return request.dictionaryRepresentation
         default:
             return nil
         }
@@ -77,16 +67,15 @@ extension MoviePlayerAPI: TargetType, AccessTokenAuthorizable {
     
     var task: Task {
         switch self {
-        case .reco:
-            return .requestPlain
+        case .getPopularMovieList(let request):
+            return .requestParameters(parameters: request.dictionaryRepresentation, encoding: URLEncoding.queryString)
         default:
-            let requestParams = self.parameters ?? [:]
-            debugPrint("task_parameter: \(requestParams)")
-            return .requestParameters(parameters: requestParams, encoding: self.parameterEncoding)
+            return .requestPlain
         }
+        
     }
     
     var headers: [String : String]? {
-        return ["Content-Type": "application/json", "Accept": "application/json"]
+        return [:]
     }
 }
