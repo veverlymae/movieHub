@@ -181,17 +181,15 @@
 		C63F523A25B81E050098A502 /* Movie Player */ = {
 			isa = PBXGroup;
 			children = (
+				C68C52BE25E6100700434A6F /* Delegate */,
+				C68C52BD25E60F8800434A6F /* Supporting */,
+				C68C52BC25E60F6900434A6F /* Interface */,
 				C66EC27725B9821E00A959D4 /* Services */,
-				C63F523B25B81E050098A502 /* AppDelegate.swift */,
 				C63F527325B838AB0098A502 /* Application Coordinator */,
 				C63F524425B81E070098A502 /* Assets.xcassets */,
 				C63F527225B838680098A502 /* Custom Components */,
-				C63F528325B846EC0098A502 /* GoogleService-Info.plist */,
-				C63F524925B81E070098A502 /* Info.plist */,
-				C63F524625B81E070098A502 /* LaunchScreen.storyboard */,
 				C66EC26D25B974D700A959D4 /* Model */,
 				C63F527425B838E50098A502 /* Protocols */,
-				C63F523D25B81E050098A502 /* SceneDelegate.swift */,
 				C63F526B25B8206C0098A502 /* Scenes */,
 			);
 			path = "Movie Player";
@@ -341,6 +339,32 @@
 				C68013E525BA7A93007D629C /* SearchViewController+View.swift */,
 			);
 			path = Search;
+			sourceTree = "<group>";
+		};
+		C68C52BC25E60F6900434A6F /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				C63F524625B81E070098A502 /* LaunchScreen.storyboard */,
+			);
+			path = Interface;
+			sourceTree = "<group>";
+		};
+		C68C52BD25E60F8800434A6F /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				C63F528325B846EC0098A502 /* GoogleService-Info.plist */,
+				C63F524925B81E070098A502 /* Info.plist */,
+			);
+			path = Supporting;
+			sourceTree = "<group>";
+		};
+		C68C52BE25E6100700434A6F /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				C63F523D25B81E050098A502 /* SceneDelegate.swift */,
+				C63F523B25B81E050098A502 /* AppDelegate.swift */,
+			);
+			path = Delegate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -774,7 +798,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Movie Player/Info.plist";
+				INFOPLIST_FILE = "Movie Player/Supporting/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -792,7 +816,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Movie Player/Info.plist";
+				INFOPLIST_FILE = "Movie Player/Supporting/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
