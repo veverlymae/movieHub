@@ -20,11 +20,11 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.Indentifier.movieCollectionViewCell, for: indexPath) as? MovieCollectionViewCell else {
-            return UICollectionViewCell()
+        if collectionView == homePopularView.popularCollectionView {
+            let cellA = collectionView.dequeueReusableCell(withReuseIdentifier: "MovieCollectionViewCell", for: indexPath) as? MovieCollectionViewCell
+            cellA?.movieViewModel = self.moviesResponseModel?.result?[indexPath.row]
+            return cellA ?? UICollectionViewCell()
         }
-        
-        cell.movieViewModel = self.moviesResponseModel?.result?[indexPath.row]
-        return cell
+        return UICollectionViewCell()
     }
 }

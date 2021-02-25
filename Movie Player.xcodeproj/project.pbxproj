@@ -36,7 +36,7 @@
 		C6604BA325E6D79100D430C9 /* NetworkAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6604BA225E6D79100D430C9 /* NetworkAdapter.swift */; };
 		C66EC26025B9368400A959D4 /* HomeViewController+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66EC25F25B9368400A959D4 /* HomeViewController+View.swift */; };
 		C66EC26225B9423200A959D4 /* HomeSubHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66EC26125B9423200A959D4 /* HomeSubHeaderView.swift */; };
-		C66EC26825B9642300A959D4 /* HomeTrailerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66EC26725B9642300A959D4 /* HomeTrailerView.swift */; };
+		C66EC26825B9642300A959D4 /* HomePopularView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66EC26725B9642300A959D4 /* HomePopularView.swift */; };
 		C66EC26A25B968A900A959D4 /* HomeViewController+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66EC26925B968A900A959D4 /* HomeViewController+CollectionView.swift */; };
 		C66EC26C25B971AD00A959D4 /* HomeTrendingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66EC26B25B971AD00A959D4 /* HomeTrendingView.swift */; };
 		C66EC27B25B9825200A959D4 /* MoviePlayerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66EC27A25B9825200A959D4 /* MoviePlayerAPI.swift */; };
@@ -104,7 +104,7 @@
 		C6604BA225E6D79100D430C9 /* NetworkAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAdapter.swift; sourceTree = "<group>"; };
 		C66EC25F25B9368400A959D4 /* HomeViewController+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController+View.swift"; sourceTree = "<group>"; };
 		C66EC26125B9423200A959D4 /* HomeSubHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSubHeaderView.swift; sourceTree = "<group>"; };
-		C66EC26725B9642300A959D4 /* HomeTrailerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTrailerView.swift; sourceTree = "<group>"; };
+		C66EC26725B9642300A959D4 /* HomePopularView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePopularView.swift; sourceTree = "<group>"; };
 		C66EC26925B968A900A959D4 /* HomeViewController+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController+CollectionView.swift"; sourceTree = "<group>"; };
 		C66EC26B25B971AD00A959D4 /* HomeTrendingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTrendingView.swift; sourceTree = "<group>"; };
 		C66EC27A25B9825200A959D4 /* MoviePlayerAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviePlayerAPI.swift; sourceTree = "<group>"; };
@@ -257,19 +257,19 @@
 			path = UIView;
 			sourceTree = "<group>";
 		};
-		C63F527125B8234D0098A502 /* UICollectionView */ = {
+		C63F527125B8234D0098A502 /* UICollectionViewCell */ = {
 			isa = PBXGroup;
 			children = (
 				C6604BA025E6D39500D430C9 /* MovieCollectionViewCell.swift */,
 			);
-			path = UICollectionView;
+			path = UICollectionViewCell;
 			sourceTree = "<group>";
 		};
 		C63F527225B838680098A502 /* Custom Components */ = {
 			isa = PBXGroup;
 			children = (
 				C63F527B25B839840098A502 /* UIDevice */,
-				C63F527125B8234D0098A502 /* UICollectionView */,
+				C63F527125B8234D0098A502 /* UICollectionViewCell */,
 				C63F526F25B8227B0098A502 /* UIView */,
 			);
 			path = "Custom Components";
@@ -306,7 +306,7 @@
 			children = (
 				C63F528125B840600098A502 /* HomeHeaderView.swift */,
 				C66EC26125B9423200A959D4 /* HomeSubHeaderView.swift */,
-				C66EC26725B9642300A959D4 /* HomeTrailerView.swift */,
+				C66EC26725B9642300A959D4 /* HomePopularView.swift */,
 				C66EC26B25B971AD00A959D4 /* HomeTrendingView.swift */,
 			);
 			path = Home;
@@ -648,7 +648,7 @@
 				C63F527625B838FB0098A502 /* Coordinator.swift in Sources */,
 				C6604B9F25E6CFC200D430C9 /* MovieListPresenter.swift in Sources */,
 				C68013E625BA7A93007D629C /* SearchViewController+View.swift in Sources */,
-				C66EC26825B9642300A959D4 /* HomeTrailerView.swift in Sources */,
+				C66EC26825B9642300A959D4 /* HomePopularView.swift in Sources */,
 				C66EC26C25B971AD00A959D4 /* HomeTrendingView.swift in Sources */,
 				C6604B9B25E6C4CF00D430C9 /* Constants.swift in Sources */,
 				C6604BA325E6D79100D430C9 /* NetworkAdapter.swift in Sources */,

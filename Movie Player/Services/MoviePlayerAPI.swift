@@ -9,9 +9,6 @@
 import Moya
 import Alamofire
 
-let apiKey = "8690372ae0e553b32046c8c9d7d83a3c"
-let language = "en-US"
-
 enum MoviePlayerAPI {
     case getPopularMovieList(request: MovieLatestList.Request)
 }
@@ -31,7 +28,7 @@ extension MoviePlayerAPI: TargetType, AccessTokenAuthorizable {
     
     var path: String {
         switch self {
-        case .getPopularMovieList(let request):
+        case .getPopularMovieList:
             return "popular"
         default:
             return ""

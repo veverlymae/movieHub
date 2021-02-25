@@ -13,6 +13,9 @@ class HomeTrendingView: UIView {
     lazy var trendingLabel: UILabel = UILabel()
     lazy var trendingCollectionView: UICollectionView = {
          let layout = UICollectionViewFlowLayout()
+         layout.scrollDirection = .horizontal
+         layout.itemSize = CGSize(width: 100, height: 200)
+         layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
          let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
          return collectionView
     }()

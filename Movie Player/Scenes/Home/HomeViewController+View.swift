@@ -44,19 +44,19 @@ extension HomeViewController {
     }
     
     private func setupTrailerView() {
-        scrollView.addSubview(homeTrailerView)
-        homeTrailerView.snp.makeConstraints { make in
+        scrollView.addSubview(homePopularView)
+        homePopularView.snp.makeConstraints { make in
             make.top.equalTo(homeSubHeaderView.snp.bottom)
             make.left.right.equalTo(homeSubHeaderView)
-             make.height.equalTo(500)
+             make.height.equalTo(250)
         }
     }
     
     private func setupTrendingView() {
         scrollView.addSubview(homeTrendingView)
         homeTrendingView.snp.makeConstraints { make in
-            make.top.equalTo(homeTrailerView.snp.bottom)
-            make.left.right.equalTo(homeTrailerView)
+            make.top.equalTo(homePopularView.snp.bottom)
+            make.left.right.equalTo(homePopularView)
         }
     }
 }

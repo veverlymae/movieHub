@@ -1,5 +1,5 @@
 //
-//  HomeTrailerView.swift
+//  HomePopularView.swift
 //  Movie Player
 //
 //  Created by Veverly Mae Ricaza Veverly on 1/21/21.
@@ -8,12 +8,14 @@
 
 import UIKit
 
-class HomeTrailerView: UIView {
+class HomePopularView: UIView {
 
-    lazy var latestTrailerLabel: UILabel = UILabel()
-    lazy var trailerCollectionView: UICollectionView = {
+    lazy var popularLabel: UILabel = UILabel()
+    lazy var popularCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .vertical
+        layout.scrollDirection = .horizontal
+        layout.itemSize = CGSize(width: 100, height: 200)
+        layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         return collectionView
     }()
@@ -31,19 +33,21 @@ class HomeTrailerView: UIView {
     }
     
     private func setupLatestTrailerLabel() {
-        latestTrailerLabel.text = "Latest Trailer"
-        latestTrailerLabel.textColor = .white
-        latestTrailerLabel.font = UIFont.systemFont(ofSize: 18, weight: .bold)
-        addSubview(latestTrailerLabel)
-        latestTrailerLabel.snp.makeConstraints { make in
+        popularLabel.text = "Popular"
+        popularLabel.textColor = .white
+        popularLabel.font = UIFont.systemFont(ofSize: 18, weight: .bold)
+        addSubview(popularLabel)
+        popularLabel.snp.makeConstraints { make in
             make.top.left.right.equalToSuperview().inset(20)
         }
     }
     
     private func setupTrailerCollectionView() {
-        addSubview(trailerCollectionView)
-        trailerCollectionView.snp.makeConstraints { make in
-            make.top.equalTo(latestTrailerLabel.snp.bottom).offset(10)
+        popularCollectionView.showsHorizontalScrollIndicator = false
+        popularCollectionView.showsVerticalScrollIndicator = false
+        addSubview(popularCollectionView)
+        popularCollectionView.snp.makeConstraints { make in
+            make.top.equalTo(popularLabel.snp.bottom).offset(10)
             make.left.right.bottom.equalToSuperview()
         }
     }

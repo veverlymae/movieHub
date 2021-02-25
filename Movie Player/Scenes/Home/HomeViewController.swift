@@ -17,7 +17,7 @@ class HomeViewController: UIViewController, MovieListDisplayLogic {
     var homeHeaderView: HomeHeaderView = HomeHeaderView()
     var scrollView: UIScrollView = UIScrollView()
     var homeSubHeaderView: HomeSubHeaderView = HomeSubHeaderView()
-    var homeTrailerView: HomeTrailerView = HomeTrailerView()
+    var homePopularView: HomePopularView = HomePopularView()
     var homeTrendingView: HomeTrendingView = HomeTrendingView()
     
     var currentPage = 1
@@ -72,7 +72,7 @@ class HomeViewController: UIViewController, MovieListDisplayLogic {
     }
     
     func reload() {
-        homeTrailerView.trailerCollectionView.reloadData()
+        homePopularView.popularCollectionView.reloadData()
     }
     
     func displayMovieList(_ viewModel: MovieLatestList.ViewModel) {
@@ -81,9 +81,9 @@ class HomeViewController: UIViewController, MovieListDisplayLogic {
     }
     
     func setupLatestCollectionView() {
-        homeTrailerView.trailerCollectionView.register(MovieCollectionViewCell.self, forCellWithReuseIdentifier: Constants.Indentifier.movieCollectionViewCell)
-        homeTrailerView.trailerCollectionView.delegate = self
-        homeTrailerView.trailerCollectionView.dataSource = self
+        homePopularView.popularCollectionView.register(MovieCollectionViewCell.self, forCellWithReuseIdentifier: Constants.Indentifier.movieCollectionViewCell)
+        homePopularView.popularCollectionView.delegate = self
+        homePopularView.popularCollectionView.dataSource = self
     }
     
     func fetchLatestMovies() {
